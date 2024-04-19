@@ -8,10 +8,12 @@
     <MapboxVectorStylesAndLayers />
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SheetIdentifierTracking />
     <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
   <preferences>
@@ -699,6 +701,557 @@
           <groupfilter function='level-members' level='[none:winery_id:ok]' />
         </groupfilter>
       </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/justa/OneDrive/Документы/My Tableau Repository/Datasources/wines+.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/19/2024 07:55:28 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='regions.csv_7E57E093F2B840C1B728F23C00CE5D87' table='[Extract].[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C' table='[Extract].[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]' type='table' />
+            <relation name='regions.csv_7E57E093F2B840C1B728F23C00CE5D87' table='[Extract].[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]' type='table' />
+            <relation name='vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB' table='[Extract].[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]' type='table' />
+            <relation name='vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972' table='[Extract].[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]' type='table' />
+            <relation name='toplists.csv_3F887B2544BF448994DC51B8D3283C4E' table='[Extract].[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[acidity]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[acidity]' />
+            <map key='[bottle_volume_ml]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[bottle_volume_ml]' />
+            <map key='[country_code (regions.csv)]' value='[regions.csv_7E57E093F2B840C1B728F23C00CE5D87].[country_code]' />
+            <map key='[country_code]' value='[toplists.csv_3F887B2544BF448994DC51B8D3283C4E].[country_code]' />
+            <map key='[fizziness]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[fizziness]' />
+            <map key='[id (regions.csv)]' value='[regions.csv_7E57E093F2B840C1B728F23C00CE5D87].[id]' />
+            <map key='[id (toplists.csv)]' value='[toplists.csv_3F887B2544BF448994DC51B8D3283C4E].[id]' />
+            <map key='[id (vintage_toplists_rankings.csv)]' value='[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972].[id]' />
+            <map key='[id (vintages.csv)]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[id]' />
+            <map key='[id]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[id]' />
+            <map key='[intensity]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[intensity]' />
+            <map key='[is_natural]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[is_natural]' />
+            <map key='[name (regions.csv)]' value='[regions.csv_7E57E093F2B840C1B728F23C00CE5D87].[name]' />
+            <map key='[name (toplists.csv)]' value='[toplists.csv_3F887B2544BF448994DC51B8D3283C4E].[name]' />
+            <map key='[name (vintages.csv)]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[name]' />
+            <map key='[name]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[name]' />
+            <map key='[previous_rank]' value='[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972].[previous_rank]' />
+            <map key='[price_discount_percentage]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[price_discount_percentage]' />
+            <map key='[price_discounted_from]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[price_discounted_from]' />
+            <map key='[price_euros]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[price_euros]' />
+            <map key='[rank]' value='[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972].[rank]' />
+            <map key='[ratings_average (vintages.csv)]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[ratings_average]' />
+            <map key='[ratings_average]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[ratings_average]' />
+            <map key='[ratings_count (vintages.csv)]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[ratings_count]' />
+            <map key='[ratings_count]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[ratings_count]' />
+            <map key='[region_id]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[region_id]' />
+            <map key='[sweetness]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[sweetness]' />
+            <map key='[tannin]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[tannin]' />
+            <map key='[top_list_id]' value='[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972].[top_list_id]' />
+            <map key='[url]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[url]' />
+            <map key='[user_structure_count]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[user_structure_count]' />
+            <map key='[vintage_id]' value='[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972].[vintage_id]' />
+            <map key='[wine_id]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[wine_id]' />
+            <map key='[winery_id]' value='[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C].[winery_id]' />
+            <map key='[year]' value='[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB].[year]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='wines+' increment-value='%null%' refresh-type='create' rows-inserted='3639' timestamp-start='2024-04-19 07:55:26.035' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>wines.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1020</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>wines.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>861</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_natural</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_natural]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>is_natural</remote-alias>
+              <ordinal>2</ordinal>
+              <family>wines.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[region_id]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>region_id</remote-alias>
+              <ordinal>3</ordinal>
+              <family>wines.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>257</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>winery_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[winery_id]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>winery_id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>wines.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>651</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ratings_average</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ratings_average]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>ratings_average</remote-alias>
+              <ordinal>5</ordinal>
+              <family>wines.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ratings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ratings_count]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>ratings_count</remote-alias>
+              <ordinal>6</ordinal>
+              <family>wines.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>906</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[url]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>url</remote-alias>
+              <ordinal>7</ordinal>
+              <family>wines.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1020</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>acidity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[acidity]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>acidity</remote-alias>
+              <ordinal>8</ordinal>
+              <family>wines.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1003</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fizziness</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fizziness]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>fizziness</remote-alias>
+              <ordinal>9</ordinal>
+              <family>wines.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>138</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>intensity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[intensity]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>intensity</remote-alias>
+              <ordinal>10</ordinal>
+              <family>wines.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1005</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sweetness</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sweetness]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>sweetness</remote-alias>
+              <ordinal>11</ordinal>
+              <family>wines.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>968</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tannin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[tannin]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>tannin</remote-alias>
+              <ordinal>12</ordinal>
+              <family>wines.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>867</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_structure_count</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[user_structure_count]</local-name>
+              <parent-name>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</parent-name>
+              <remote-alias>user_structure_count</remote-alias>
+              <ordinal>13</ordinal>
+              <family>wines.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>449</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id (regions.csv)]</local-name>
+              <parent-name>[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>14</ordinal>
+              <family>regions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>261</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name (regions.csv)]</local-name>
+              <parent-name>[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>15</ordinal>
+              <family>regions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>261</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country_code (regions.csv)]</local-name>
+              <parent-name>[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]</parent-name>
+              <remote-alias>country_code</remote-alias>
+              <ordinal>16</ordinal>
+              <family>regions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id (vintages.csv)]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>17</ordinal>
+              <family>vintages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2050</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name (vintages.csv)]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>18</ordinal>
+              <family>vintages.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2050</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wine_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[wine_id]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>wine_id</remote-alias>
+              <ordinal>19</ordinal>
+              <family>vintages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>815</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ratings_average</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ratings_average (vintages.csv)]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>ratings_average</remote-alias>
+              <ordinal>20</ordinal>
+              <family>vintages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ratings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ratings_count (vintages.csv)]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>ratings_count</remote-alias>
+              <ordinal>21</ordinal>
+              <family>vintages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>666</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>22</ordinal>
+              <family>vintages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_euros</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_euros]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>price_euros</remote-alias>
+              <ordinal>23</ordinal>
+              <family>vintages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>798</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_discounted_from</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_discounted_from]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>price_discounted_from</remote-alias>
+              <ordinal>24</ordinal>
+              <family>vintages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_discount_percentage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_discount_percentage]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>price_discount_percentage</remote-alias>
+              <ordinal>25</ordinal>
+              <family>vintages.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bottle_volume_ml</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bottle_volume_ml]</local-name>
+              <parent-name>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</parent-name>
+              <remote-alias>bottle_volume_ml</remote-alias>
+              <ordinal>26</ordinal>
+              <family>vintages.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id (vintage_toplists_rankings.csv)]</local-name>
+              <parent-name>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>27</ordinal>
+              <family>vintage_toplists_rankings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>184</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>top_list_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[top_list_id]</local-name>
+              <parent-name>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</parent-name>
+              <remote-alias>top_list_id</remote-alias>
+              <ordinal>28</ordinal>
+              <family>vintage_toplists_rankings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>124</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vintage_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vintage_id]</local-name>
+              <parent-name>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</parent-name>
+              <remote-alias>vintage_id</remote-alias>
+              <ordinal>29</ordinal>
+              <family>vintage_toplists_rankings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>129</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rank]</local-name>
+              <parent-name>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</parent-name>
+              <remote-alias>rank</remote-alias>
+              <ordinal>30</ordinal>
+              <family>vintage_toplists_rankings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>previous_rank</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[previous_rank]</local-name>
+              <parent-name>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</parent-name>
+              <remote-alias>previous_rank</remote-alias>
+              <ordinal>31</ordinal>
+              <family>vintage_toplists_rankings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id (toplists.csv)]</local-name>
+              <parent-name>[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>32</ordinal>
+              <family>toplists.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>124</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name (toplists.csv)]</local-name>
+              <parent-name>[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>33</ordinal>
+              <family>toplists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>124</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country_code]</local-name>
+              <parent-name>[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]</parent-name>
+              <remote-alias>country_code</remote-alias>
+              <ordinal>34</ordinal>
+              <family>toplists.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LRU_RRU' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
@@ -752,6 +1305,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='regions.csv_7E57E093F2B840C1B728F23C00CE5D87' table='[Extract].[regions.csv_7E57E093F2B840C1B728F23C00CE5D87]' type='table' />
+            </properties>
           </object>
           <object caption='toplists.csv' id='toplists.csv_3F887B2544BF448994DC51B8D3283C4E'>
             <properties context=''>
@@ -762,6 +1318,9 @@
                   <column datatype='string' name='country_code' ordinal='2' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='toplists.csv_3F887B2544BF448994DC51B8D3283C4E' table='[Extract].[toplists.csv_3F887B2544BF448994DC51B8D3283C4E]' type='table' />
             </properties>
           </object>
           <object caption='vintage_toplists_rankings.csv' id='vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972'>
@@ -775,6 +1334,9 @@
                   <column datatype='real' name='previous_rank' ordinal='4' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972' table='[Extract].[vintage_toplists_rankings.csv_6A2BB05571894EFE93B23FBBD1D81972]' type='table' />
             </properties>
           </object>
           <object caption='vintages.csv' id='vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB'>
@@ -793,6 +1355,9 @@
                   <column datatype='integer' name='bottle_volume_ml' ordinal='9' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB' table='[Extract].[vintages.csv_FC030C629BD14E76BE64EAFCD0AFD7AB]' type='table' />
             </properties>
           </object>
           <object caption='wines.csv' id='wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C'>
@@ -815,6 +1380,9 @@
                   <column datatype='real' name='user_structure_count' ordinal='13' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C' table='[Extract].[wines.csv_8D86FB6ACB9A4B5CAA857E59202F892C]' type='table' />
             </properties>
           </object>
         </objects>
@@ -863,7 +1431,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run fontname='Broadway' fontsize='28'>TOP WINERIES AND THEIR WINES</run>
+            <run>Top 3 wineries and their wines</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -1020,9 +1588,9 @@
             <format attr='line-visibility' scope='cols' value='off' />
           </style-rule>
           <style-rule element='title'>
-            <format attr='background-color' value='#e6e6e6' />
-            <format attr='border-width' value='1' />
-            <format attr='border-style' value='solid' />
+            <format attr='background-color' value='#ffffff' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
           </style-rule>
           <style-rule element='map'>
             <format attr='washout' value='0.0' />
