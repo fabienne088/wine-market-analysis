@@ -1,3 +1,16 @@
 .venv
 vivino.db
 'vivino.db'
+data/countries.csv
+data/flavor_groups.csv
+data/grapes.csv
+data/keywords_wine.csv
+data/keywords.csv
+data/most_used_grapes_per_country.csv
+data/regions.csv
+data/toplists.csv
+data/vintage_toplists_rankings.csv
+data/vintages.csv
+data/wineries.csv
+data/wines.csv
+~Book3__9108.twbr
