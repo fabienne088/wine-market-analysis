@@ -38,7 +38,7 @@ Install the packages from the ```requirements.py``` file. Additionally, to inter
 
 ## SQL Queries
 The SQL Queries used in the project to answer the questions can be found in the ```sql_answers.ipynb``` file.
-The ```presentation.pdf``` file contains the explanation and presentation.
+The [presentation](https://www.canva.com/design/DAGC2BrLHtE/0gl-4-s2O0nNvP3s-pxT9g/edit?utm_content=DAGC2BrLHtE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) contains the summary and results of the work.
 
 
 ## Authors
